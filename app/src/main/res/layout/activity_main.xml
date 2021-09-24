@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_photoback"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/firstNameEditTxtView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/firstname"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/lastNameNameEditTxtView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/lastname"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditTxtView" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ageEditTxtView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameNameEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailEditTxtView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorSuccessTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTxtView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Error" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activeMembersTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTxtView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/activeusers"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activeMembersValueTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/activeMembersTxtView"
+        app:layout_constraintStart_toStartOf="@+id/activeMembersTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/activeMembersTxtView"
+        tools:text="Value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/removedUsersTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/removedusers"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/removedMembersValueTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/removedUsersTxtView"
+        app:layout_constraintStart_toStartOf="@+id/removedUsersTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/removedUsersTxtView"
+        tools:text="Value" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTxtView"
+        android:text="@string/add"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/removeUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/update"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTxtView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
