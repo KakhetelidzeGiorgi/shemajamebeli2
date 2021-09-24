@@ -44,21 +44,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun update() {
-        val user = User(
-            firstName = binding.firstNameEditTxtView.text.toString(),
-            lastName = binding.lastNameNameEditTxtView.text.toString(),
-            age = binding.ageEditTxtView.text.toString().toInt(),
-            email = binding.emailEditTxtView.text.toString()
-        )
-
         val curMail = binding.emailEditTxtView.text.toString()
 
-        for((index,element) in data.withIndex()){
-            if(element.email == curMail){
-                data[index].age = binding.ageEditTxtView.text.toString().toInt()
-                data[index].firstName = binding.firstNameEditTxtView.text.toString()
-                data[index].lastName = binding.lastNameNameEditTxtView.text.toString()
+        for ((index, element) in data.withIndex()) {
+            if (element.email == curMail) {
+                val curUser = data[index]
+                curUser.age = binding.ageEditTxtView.text.toString().toInt()
+                curUser.firstName = binding.firstNameEditTxtView.text.toString()
+                curUser.lastName = binding.lastNameNameEditTxtView.text.toString()
                 setSuccess()
+                toast(UPDATED)
                 return
             }
         }
@@ -161,6 +156,7 @@ class MainActivity : AppCompatActivity() {
         const val FILL_FIELDS = "You must fill every field"
         const val SUCCESS = "Success"
         const val ERROR = "Success"
+        const val UPDATED = "Updated"
     }
 
 }
