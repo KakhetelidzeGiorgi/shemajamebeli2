@@ -1,8 +1,6 @@
 package com.example.shemajamebeli2
 
-import android.annotation.SuppressLint
 import android.graphics.Color
-import android.graphics.Color.green
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -48,10 +46,9 @@ class MainActivity : AppCompatActivity() {
 
         for ((index, element) in data.withIndex()) {
             if (element.email == curMail) {
-                val curUser = data[index]
-                curUser.age = binding.ageEditTxtView.text.toString().toInt()
-                curUser.firstName = binding.firstNameEditTxtView.text.toString()
-                curUser.lastName = binding.lastNameNameEditTxtView.text.toString()
+                data[index].age = binding.ageEditTxtView.text.toString().toInt()
+                data[index].firstName = binding.firstNameEditTxtView.text.toString()
+                data[index].lastName = binding.lastNameNameEditTxtView.text.toString()
                 setSuccess()
                 toast(UPDATED)
                 return
